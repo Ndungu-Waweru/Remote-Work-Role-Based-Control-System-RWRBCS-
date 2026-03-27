@@ -1,0 +1,267 @@
+/* UsersTable.css */
+
+/* Container */
+.users-container {
+background: #fff;
+border-radius: 16px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+border: 1px solid #f1f5f9;
+overflow: hidden;
+margin-top: 20px;
+}
+
+/* Header */
+.table-header-actions {
+padding: 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+border-bottom: 1px solid #f1f5f9;
+}
+
+/* Search */
+.search-wrapper {
+flex: 1;
+max-width: 400px;
+display: flex;
+align-items: center;
+background: #f8fafc;
+padding: 10px 16px;
+border-radius: 12px;
+border: 1.5px solid #e2e8f0;
+transition: all .3s;
+}
+
+.search-wrapper:focus-within {
+border-color: #4f46e5;
+background: #fff;
+box-shadow: 0 0 0 4px rgba(79,70,229,.1);
+}
+
+.search-input {
+flex: 1;
+border: none;
+outline: none;
+background: transparent;
+font-size: 14px;
+margin-left: 8px;
+}
+
+/* Table */
+.users-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.users-table th {
+padding: 16px 24px;
+background: #f8fafc;
+color: #64748b;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+border-bottom: 1px solid #f1f5f9;
+}
+
+.users-table td {
+padding: 16px 24px;
+vertical-align: middle;
+}
+
+.users-table tr {
+border-bottom: 1px solid #f8fafc;
+transition: background .2s;
+}
+
+.users-table tr:hover {
+background: #fcfdfe;
+}
+
+/* Avatar */
+.avatar {
+width: 36px;
+height: 36px;
+border-radius: 10px;
+background: #4f46e5;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+font-size: 14px;
+position: relative;
+}
+
+/* Status */
+.status-dot {
+position: absolute;
+top: -2px;
+right: -2px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+}
+
+.status-dot.online { background:#16a34a; }
+.status-dot.offline { background:#9ca3af; }
+
+/* Role badges */
+.badge {
+padding: 6px 12px;
+border-radius: 8px;
+font-size: 11px;
+font-weight: 700;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+text-transform: uppercase;
+}
+
+.badge-admin { background:#fee2e2; color:#991b1b; }
+.badge-manager { background:#fff7ed; color:#9a3412; }
+.badge-employee { background:#f0fdf4; color:#166534; }
+.badge-hr { background:#f5f3ff; color:#5b21b6; }
+.badge-it-support { background:#ecfeff; color:#155e75; }
+
+/* Buttons */
+.create-btn {
+background:#4f46e5;
+color:#fff;
+border:none;
+padding:10px 20px;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+transition:.2s;
+}
+
+.create-btn:hover {
+background:#4338ca;
+transform:translateY(-1px);
+}
+
+.refresh-btn {
+background:#f1f5f9;
+border:none;
+padding:10px 16px;
+border-radius:10px;
+color:#64748b;
+cursor:pointer;
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+font-size:13px;
+}
+
+/* Action buttons */
+.action-icon {
+display:flex;
+align-items:center;
+justify-content:center;
+width:32px;
+height:32px;
+border-radius:8px;
+border:none;
+background:#f3f4f6;
+color:#111827;
+cursor:pointer;
+transition:.2s;
+}
+
+.action-icon svg {
+pointer-events:none;
+}
+
+.action-icon:hover {
+background:#e5e7eb;
+}
+
+.action-icon.edit:hover {
+background:#dbeafe;
+}
+
+.action-icon.reset:hover {
+background:#fef3c7;
+}
+
+.action-icon.lock-toggle:hover {
+background:#fee2e2;
+}
+
+.action-icon.delete:hover {
+background:#fee2e2;
+}
+
+.action-icon:disabled {
+opacity:.5;
+cursor:not-allowed;
+}
+
+/* Refresh animation */
+@keyframes spin {
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+.spinning {
+animation:spin 1s linear infinite;
+}
+
+/* Modal */
+.modal-overlay {
+position:fixed;
+inset:0;
+background:rgba(30,30,30,.6);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+.modal {
+background:#fff;
+border-radius:12px;
+padding:24px 28px;
+width:360px;
+max-width:90%;
+box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+
+.modal h3 {
+margin-top:0;
+margin-bottom:16px;
+font-size:18px;
+}
+
+.modal input,
+.modal select {
+width:100%;
+padding:10px 12px;
+margin-bottom:14px;
+border-radius:6px;
+border:1px solid #d1d5db;
+}
+
+.modal-actions {
+display:flex;
+justify-content:flex-end;
+gap:10px;
+}
+
+.modal-actions button {
+padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.modal-actions button:first-child {
+background:#2563eb;
+color:#fff;
+}
+
+.modal-actions button:last-child {
+background:#e5e7eb;
+}
